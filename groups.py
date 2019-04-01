@@ -280,9 +280,3 @@ class Group(object):
         return Group(self.gtype,self.mod,gs)
 
 
-
-                
-            
-    
-
-
