@@ -11,6 +11,7 @@ mainWin = tk.Tk()
 
 def printFact():
    p = E1.get()
+   E1.delete(0,END)
    if len(p)>0:
        x = pr.primeFact(int(p))
        print(x)
