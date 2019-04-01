@@ -4,19 +4,20 @@ Created on Thu Mar 28 22:39:18 2019
 
 @author: 18pt16
 """
-#from groups import Group
 import pure as pr
 import tkinter as tk
 
 mainWin = tk.Tk()
 
-def helloCall():
+def printFact():
    p = E1.get()
    if len(p)>0:
        x = pr.primeFact(int(p))
        print(x)
    var2 = tk.StringVar()
-   L2 = tk.Label(mainWin,text="factors",textvariable = var2)
+   F3 = tk.Frame(mainWin)
+   F3.pack(padx=10,pady=30,side = 'top')
+   L2 = tk.Label(F3,text="Factors",textvariable = var2)
    var2.set(x)
    L2.pack()
 
@@ -31,15 +32,12 @@ L1 = tk.Label(F2, text="Number")
 var1 = tk.StringVar()
 
 E1 = tk.Entry(F2, bd = 5,textvariable = var1)
-
 L1.pack( side = 'left')
 E1.pack(side = 'right')
 
 F = tk.Frame(mainWin)
 F.pack(padx=10,pady=30,side = 'top')
-
-B = tk.Button(F ,text = "Create Group",command = helloCall)
+B = tk.Button(F ,text = "Create Group",command = printFact)
 B.pack()
-
 
 mainWin.mainloop()
